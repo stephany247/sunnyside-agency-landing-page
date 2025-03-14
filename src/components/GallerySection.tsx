@@ -2,7 +2,7 @@ import GalleryItem from "./GalleryItem";
 
 const GallerySection = () => {
   return (
-    <section className="grid grid-cols-2 md:grid-cols-4">
+    <section className="grid grid-cols-2 md:grid-cols-4" id="projects">
       <GalleryItem
         bgClass="bg-[url('../assets/images/mobile/image-gallery-milkbottles.jpg')] sm:bg-[url('../assets/images/desktop/image-gallery-milkbottles.jpg')]"
         alt="Milk Bottles"

@@ -36,7 +36,7 @@ const FeatureCard = ({ mobileImage, desktopImage, title, description, linkText, 
 
 const FeatureSection = () => {
   return (
-    <section className="grid md:grid-cols-1">
+    <section className="grid md:grid-cols-1" id="about">
       <FeatureCard
         mobileImage={mobileEgg}
         desktopImage={desktopEgg}

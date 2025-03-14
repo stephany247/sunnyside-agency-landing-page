@@ -2,7 +2,7 @@ import ServiceCard from "./ServiceCard";
 
 const ServiceSection = () => {
   return (
-    <section className="grid md:grid-cols-2">
+    <section className="grid md:grid-cols-2" id="services">
       <ServiceCard
         bgClass="bg-[url('../assets/images/mobile/image-graphic-design.jpg')] sm:bg-[url('../assets/images/desktop/image-graphic-design.jpg')]"
         title="Graphic Design"

@@ -4,10 +4,10 @@ import hamburger from "../assets/images/icon-hamburger.svg";
 import arrow from "../assets/images/icon-arrow-down.svg";
 
 const NAV_LINKS = [
-  { href: "#", text: "About" },
-  { href: "#", text: "Services" },
-  { href: "#", text: "Projects" },
-  { href: "#", text: "Contact" },
+  { href: "#about", text: "About" },
+  { href: "#services", text: "Services" },
+  { href: "#projects", text: "Projects" },
+  { href: "#contact", text: "Contact" },
 ];
 
 const renderNavLinks = () => {
@@ -15,10 +15,10 @@ const renderNavLinks = () => {
     <li key={link.text} className="py-2">
       <a
         href={link.href}
-        className={`md:block hover:text-neutral-dark-blue active:text-neutral-dark-blue active:font-fraunces transition duration-300 ease-in-out px-6 py-3 w-auto md:min-w-[100px] rounded-full 
+        className={`md:block hover:text-neutral-dark-blue active:text-neutral-dark-blue transition duration-300 ease-in-out px-6 py-3 w-auto md:min-w-[100px] rounded-full 
           ${
             link.text === "Contact"
-              ? "bg-primary-yellow md:bg-neutral-white hover:bg-neutral-white/30 hover:text-neutral-white text-neutral-dark-blue font-fraunces uppercase"
+              ? "bg-primary-yellow md:bg-neutral-white hover:bg-neutral-white/30 hover:text-neutral-white text-neutral-dark-blue font-fraunces uppercase focus:font-fraunces active:font-fraunces"
               : " text-neutral-grayish-blue md:text-neutral-white"
           }
         `}
@@ -40,18 +40,9 @@ const Header = () => {
     <header className="bg-[url('/assets/images/mobile/image-header.jpg')] sm:bg-[url('/assets/images/desktop/image-header.jpg')] bg-cover bg-top bg-no-repeat w-full min-h-screen h-[120vh] relative text-center text-neutral-white font-bold">
       <nav className="flex justify-between items-center p-4 lg:px-20 absolute w-full top-0 z-10">
         <img src={logo} alt="logo" />
-        {/* <div className=""> */}
         <button type="button" className="md:hidden" onClick={toggleMenu}>
           <img src={hamburger} alt="hamburger icon" className="w-8 h-8" />
         </button>
-        {/* </div> */}
-        {/* <ul
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } md:flex justify-between space-y-2 p-8 md:p-0 bg-white md:bg-transparent transition duration-300 ease-in-out absolute md:relative top-24 left-1/2 -translate-x-1/2 w-10/12 md:w-auto md:top-0 md:left-auto before:content-[''] before:absolute before:top-[-30px] before:right-0 before:w-7 before:h-8 before:border-b-white before:border-b-[28px] before:border-l-[28px] before:border-l-transparent bef`}
-        >
-          {renderNavLinks()}
-        </ul> */}
         <ul
           className={`${
             isMenuOpen
@@ -61,11 +52,8 @@ const Header = () => {
         >
           {renderNavLinks()}
         </ul>
-        {/* <div
-          className="block md:hidden absolute top-2 right-8 border-l-[28px] border-l-transparent border-b-[28px] border-b-white"
-        ></div> */}
       </nav>
-      <h1 className="font-fraunces absolute top-2/7 left-1/2 transform -translate-x-1/2 text-[2.5rem] sm:text-5xl md:text-7xl md:w-full uppercase tracking-[0.2em]">
+      <h1 className="font-fraunces absolute top-2/7 left-1/2 transform -translate-x-1/2 text-[2.5rem] sm:text-5xl lg:text-7xl md:w-full uppercase tracking-[0.2em]">
         We are creatives
       </h1>
       {!isMenuOpen && (

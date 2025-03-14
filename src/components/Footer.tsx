@@ -5,9 +5,9 @@ import twitterIcon from "../assets/images/icon-twitter.svg";
 import pinterestIcon from "../assets/images/icon-pinterest.svg";
 
 const NAV_LINKS = [
-  { href: "#", text: "About" },
-  { href: "#", text: "Services" },
-  { href: "#", text: "Projects" },
+  { href: "#about", text: "About" },
+  { href: "#services", text: "Services" },
+  { href: "#project", text: "Projects" },
 ];
 
 const SOCIAL_ICONS = [
@@ -41,7 +41,7 @@ const renderSocialIcons = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#8ed0c4] text-primary-footer py-16 px-8">
+    <footer className="bg-[#8ed0c4] text-primary-footer py-16 px-8" id="contact">
       <div className="container mx-auto text-center max-w-sm">
         <img src={logo} alt="Sunnyside logo" className="mx-auto mb-10 w-42 logo-filter" />
         <nav className="mb-20">
