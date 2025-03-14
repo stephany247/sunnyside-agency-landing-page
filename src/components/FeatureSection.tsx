@@ -15,7 +15,7 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ mobileImage, desktopImage, title, description, linkText, linkColor, reverse }: FeatureCardProps) => {
   return (
-    <div className={`grid md:grid-cols-2 ${reverse ? 'md:flex-row-reverse' : ''}`}>
+    <div className={`grid md:grid-cols-2 min-h-screen ${reverse ? 'md:flex-row-reverse' : ''}`}>
       <img src={mobileImage} alt={title} className="w-full h-full md:hidden" />
       <img src={desktopImage} alt={title} className={`w-full h-full hidden md:block ${reverse ? 'md:order-last' : ''}`} />
       <div className="py-12 px-7 text-center md:text-left flex flex-col justify-center gap-y-6 sm:mx-auto">
