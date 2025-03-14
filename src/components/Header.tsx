@@ -60,7 +60,7 @@ const Header = () => {
         <img
           src={arrow}
           alt="Arrow"
-          className="absolute left-1/2 top-5/9 transform -translate-x-1/2 z-10"
+          className="absolute left-1/2 top-5/9 lg:top-4/9 xl:top-5/9 2xl:top-5/9 transform -translate-x-1/2 z-10"
         />
       )}
     </header>
